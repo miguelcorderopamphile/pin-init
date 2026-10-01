@@ -1,15 +1,3 @@
-error: lifetime may not live long enough
-  --> tests/ui/compile-fail/pin_data/selfref_lifetime_specialize.rs:24:15
-   |
-24 |     lt_spec2: LtSpec2<'a, 'b>,
-   |               ^^^^^^^^^^^^^^^ requires that `'b` must outlive `'a`
-25 |     a: u32,
-   |     - lifetime `'a` defined here
-26 |     b: u32,
-   |     - lifetime `'b` defined here
-   |
-   = help: consider adding the following bound: `'b: 'a`
-
 error: higher-ranked lifetime error
   --> tests/ui/compile-fail/pin_data/selfref_lifetime_specialize.rs:34:5
    |
